@@ -6,7 +6,7 @@ public class Converter {
    return km;
 }
 int convertStepsToKilocalories(int steps) {
-      int kcal = (steps*50)/1000;
+      int kcal = (steps*50)/100000;
       return kcal;
 }
  double averageSteps( int steps) {
