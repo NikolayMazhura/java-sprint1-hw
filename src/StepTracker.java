@@ -19,23 +19,25 @@ public  class StepTracker {
         int month = scanner.nextInt();
         if (month <= 0) {
             System.out.println("Месяца начинаются с 0!");
+            return;
         } else if (month >= 13) {
             System.out.println("Число не может быть выше 12!");
-
+                  return;
         } else {
             System.out.println("Введите день от 1 до 30 (включительно)");
             int days = scanner.nextInt();
             if (days <= 0) {
                 System.out.println("Число не может быть ниже или равно 0!");
-
+                     return;
             } else if (days > 30) {
                 System.out.println("Число не может быть выше 30 !");
-
+                          return;
             } else {
                 System.out.println("Введите количество шагов");
                 int steps = scanner.nextInt();
                 if (steps <= 0) {
-                    System.out.println("Число не может быть ниже 0 или меньше 0");
+                    System.out.println("значение должно быть положительным");
+                    return;
                 }
 
                 MonthData monthData = monthToData[month - 1];
